@@ -17,14 +17,14 @@ function draw() {
 	background('#121220');
 
 	// 檢查滑鼠位置並控制選單
-	// if (sideMenu) {
-	// 	if (winMouseX < 300) { // 當滑鼠在選單區域內 (寬度 300px)
-	// 		sideMenu.addClass('menu-visible');
-  //     text('123456 '  , 0, height / 2);
-	// 	} else { // 否則就隱藏選單
-	// 		sideMenu.removeClass('menu-visible');
-	// 	}
-	// }
+	if (sideMenu) {
+		if (winMouseX < 300) { // 當滑鼠在選單區域內 (寬度 300px)
+			sideMenu.addClass('menu-visible'); // 顯示選單
+			
+		} else { // 否則就隱藏選單
+			sideMenu.removeClass('menu-visible');
+		}
+	}
 
 	for (let o of objs) {
 		o.run();
