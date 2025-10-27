@@ -27,14 +27,14 @@ canvas {
   background-color: #1a1a2e; /* 選單背景色 */
   padding-top: 60px; /* 頂部留白 */
   z-index: 1000; /* 確保在最上層 */
-  /* transform: translateX(-100%); 預設隱藏在左側 */
-  transform: translateX(0); /* 預設顯示在左側 */
+  transform: translateX(-100%); /* 預設隱藏在左側 */
   transition: transform 0.5s ease-in-out; /* 滑動動畫效果 */
   box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* 選單可見時的樣式 */
-.menu-visible {
+/* 選單可見時的樣式 */
+#side-menu.menu-visible {
   transform: translateX(0);
 }
 
