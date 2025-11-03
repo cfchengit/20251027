@@ -83,7 +83,7 @@ function initialize() {
 
 	// 創建選單 (如果尚未創建)
 	if (!sideMenu) {
-		sideMenu = createDiv('<a id="show-iframe-btn" href="#">第一單元作品</a><a id="show-iframe-btn-2" href="#">第一單元講義</a><a id="show-iframe-btn-3" href="#">測驗系統</a><a href="#">回到首頁</a>');
+		sideMenu = createDiv('<a id="show-iframe-btn" href="#">第一單元作品</a><a id="show-iframe-btn-2" href="#">第一單元講義</a><a id="show-iframe-btn-3" href="#">測驗系統</a><a id="show-iframe-btn-4" href="#">測驗卷筆記</a><a id="show-iframe-btn-5" href="#">作品筆記</a><a href="#">回到首頁</a>');
 		sideMenu.id('side-menu');
 
 		// 綁定點擊事件來顯示 iframe
@@ -105,6 +105,20 @@ function initialize() {
 			const iframeContainer = select('#iframe-container');
 			const iframe = select('#content-iframe');
 			iframe.attribute('src', 'https://cfchengit.github.io/20251103/');
+			iframeContainer.style('display', 'flex');
+		});
+
+		select('#show-iframe-btn-4').mousePressed(function() {
+			const iframeContainer = select('#iframe-container');
+			const iframe = select('#content-iframe');
+			iframe.attribute('src', 'https://hackmd.io/@cfchen/SJomYtHyWx');
+			iframeContainer.style('display', 'flex');
+		});
+
+		select('#show-iframe-btn-5').mousePressed(function() {
+			const iframeContainer = select('#iframe-container');
+			const iframe = select('#content-iframe');
+			iframe.attribute('src', 'https://hackmd.io/@cfchen/SJ-bt0E1be');
 			iframeContainer.style('display', 'flex');
 		});
 
